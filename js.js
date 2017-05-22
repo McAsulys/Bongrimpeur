@@ -1,11 +1,11 @@
-//Environement VAR :
+﻿//Environement VAR :
 var fail = 0;
 var attempt = 0;
 var terrain =  new Array;
 init();
 display();
 function init(){
-	terrain = [0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,0];
+	terrain = [1,0,0,0,0,0,0,0];
 }
 function er(what){
 	if(what != null){
@@ -21,30 +21,39 @@ function piece(){
 }
 function choose(choix){
 	if(choix != 0 && choix != 1){ //0 = face ; 1 = pile
-		er("WeongChoice");
+		er("WrongChoice");
 	}
 	else{
 		if(piece() == choix){
-			alert("gagné");
+			resultGame = "gagné"
 			var a = WhereIAM(); //a = position du joueur
-			terrain[a] == 0;
-			alert(terrain[a]); //la modification du tableau ne focntione pas. 
-			terrain[a+1] == 1;
+			terrain[a] = 0;
+			terrain[a+1] = 1;
+			fail = 0;
 			
 		}
 		else {
-			if(fail >= 3){
-				var a = WhereIAM();
-				terrain[a] = 0;
-				terrain[0] = 1;
-			}
 			var a = WhereIAM();
-			alert("perdu");
-			terrain[a] == 0;
-			terrain[a-1] == 1;
+			resultGame = "perdu"
+			if(a != 0){ //pour l'emecher de sortir du tableau par le début.
+				terrain[a] = 0;
+				terrain[a-1] = 1;
+			}
 			fail++;
 		}
-		attempt++;
+		attempt
+		if(fail == 3){
+			resultGame = "Game Over";
+			document.getElementById("replay").style = "display : inline-block;";
+			document.getElementById("pile").disabled = true;
+			document.getElementById("face").disabled = true;
+		}
+		if(WhereIAM() == terrain.length - 1){
+			resultGame = "Winner";
+			document.getElementById("replay").style = "display : inline-block;";
+			document.getElementById("pile").disabled = true;
+			document.getElementById("face").disabled = true;
+		}
 		display();
 	}
 }
@@ -58,4 +67,7 @@ function WhereIAM(){
 }
 function display(){
 	document.getElementById("tab").value = terrain.join();
+	document.getElementById("fail").value = fail;
+	document.getElementById("resultGame").value = resultGame;
+
 }
