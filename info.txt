@@ -1,0 +1,21 @@
+Code couleur en hexadécimal:
+
+	Rouge:-------#BF101C
+
+	Jaune:-------#EECD69
+
+	Bleu:--------#7EC0EE
+
+	Blanc:-------#FFFFFF
+
+	Vert:--------#249124
+
+	Vert Foncé:--#146627
+
+	Gris:--------#C4C4C4
+
+	Gris Foncé:--#919191
+
+TAILE CUBE
+	largeur:---61px
+	longueur:--42px
