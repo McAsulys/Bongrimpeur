@@ -44,7 +44,7 @@ function choose(choix){
 			}
 			fail++;
 		}
-		attempt
+		attempt++;
 		if(fail == 3){
 			resultGame = "Game Over";
 			document.getElementById("replay").style = "display : inline-block;";
