@@ -1,25 +1,16 @@
 #header{
  height: 20%    ;
     background-color: #BF101C;
-   
+    margin: auto;
 }
-#header li {
-      display: inline;
-    margin-left: 50px;
-    float: left
-    
-}
-#header ul{
+#logo{
     float: left;
-    margin-left: 60px;
-    margin-top: 45px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: auto;
 }
-#header li{
-    font-size: 15px;
+#titre{
+    float :left;
+    margin:auto;
+    
 }
 
 #header img{
@@ -30,8 +21,8 @@
 
 #header h1{
      margin: auto;
-    float: center;
-    float=left;
+    float: left;
+    float= left;
     font-size: 500%;
     margin-left: 200px;
     color: #EECD68;
@@ -39,9 +30,11 @@
 }
 
 
+
 #jeu {
     background-color: #EECD69;
     height: 80%;
+    margin: auto;
 }
 
 #plateauJeu{
@@ -106,27 +99,12 @@ td{
     width: 50%;
 }
 
-#jeu ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-}
+#pieceF, #pieceP, #btn, #croix, #texte{ float: left;}
 
-#jeu li {
-    float: left;
-}
-
-#jeu li img{
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 16px;
-    text-decoration: none;
-}
 #jeu p{
     font-size: 24;
 }
+
 #pieceface{
 width: 45%;
 }

@@ -6,6 +6,9 @@ init();
 display();
 function init(){
 	terrain = [1,0,0,0,0,0,0,0];
+	document.getElementById("croix1").style = "display : none;";
+	document.getElementById("croix2").style = "display : none;";
+	document.getElementById("croix3").style = "display : none;";
 }
 function er(what){
 	if(what != null){
@@ -45,14 +48,14 @@ function choose(choix){
 		if(fail == 3){
 			resultGame = "Game Over";
 			document.getElementById("replay").style = "display : inline-block;";
-			document.getElementById("pile").disabled = true;
-			document.getElementById("face").disabled = true;
+			document.getElementById("piecepile").disabled = true;
+			document.getElementById("pieceface").disabled = true;
 		}
 		if(WhereIAM() == terrain.length - 1){
 			resultGame = "Winner";
 			document.getElementById("replay").style = "display : inline-block;";
-			document.getElementById("pile").disabled = true;
-			document.getElementById("face").disabled = true;
+			document.getElementById("piecepile").disabled = true;
+			document.getElementById("pieceface").disabled = true;
 		}
 		display();
 	}
@@ -69,5 +72,10 @@ function display(){
 	document.getElementById("tab").value = terrain.join();
 	document.getElementById("fail").value = fail;
 	document.getElementById("resultGame").value = resultGame;
+	if(fail = 0){
+		document.getElementById("croix1").style = "display : none;";
+		document.getElementById("croix2").style = "display : none;";
+		document.getElementById("croix3").style = "display : none;";
+	}
 
 }

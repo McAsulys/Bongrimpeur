@@ -1,17 +1,20 @@
 <html>
     <head>
-        <title>LPG</title>
+        <title>Le bon Grimpeur</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
         <meta name="keywords" content="le, bon, grimpeur, jeu, pile ou face"/>
     </head>
     <body>
         <div id="header">
-          <ul>
-            <li><a href="LBG.html"><img src="images/montagne.png"></a></li>
-              <li> <h1>
+            <div id="logo"> 
+                        <a href="LBG.html"><img src="images/montagne.png" id="montgan"></a>
+            </div>
+            <div id="titre">
+                <h1>
                 LE BON GRIMPEUR <!-- Le titre de la page -->
-                </h1></li>
-            </ul>
+                </h1>   
+            </div>
+             
         </div>
         <div id ="jeu">
                 <div id="plateau">
@@ -284,29 +287,31 @@
                 </div>
             <br/>
             <br/>
-            <ul>
-                <li>
-                     <input type="button" value="Réessayer" id="btn" onclik="//tafonction//">
-                </li>
-                <li>
-                                <img src= "images/piecepile.png" id="piecepile">
-                </li>
-                <li>
-                    <p id="txt1"> Pile ou Face ? Pariez!</p>
-                    <p id="txt2" style='visibility:hidden'>Perdu !</p>
-                    <p id="txt3" style='visibility:hidden'>Gagné !</p>
-                    <p id="txt4" style='visibility:hidden'>Vous avez gagné !</p>
-                    <p id="txt5" style='visibility:hidden'>Vous avza perdu !</p>
-                </li>
-                <li>
-                    <img src="images/pieceface.png" id="pieceface">
-                </li>
-                <li>
-                    <img id="croix1" src="images/croix.png"></li>
-                <li><img id="croix2" src="images/croix.png"></li>
-                   <li> <img id="croix3" src="images/croix.png">
-                </li>
-            </ul>
+            
+                <div id="btn">
+                    <input type="button" value="Réessayer" id="btn" onclik="location.reload();">
+            
+                </div>
+                     <div id="pieceP">
+                            <img src= "images/piecepile.png" id="piecepile" onclick="choose(1);">
+                    </div>
+                           <div id= "texte">
+                                <input type="text" id="txt" disabled/>
+            </div>
+
+                <div id="pieceF">
+                                <img src="images/pieceface.png" id="pieceface" onclick="choose(0);">
+            </div>
+                    <div id="croix">
+                         <img id="croix1" src="images/croix.png">
+				<img id="croix2" src="images/croix.png">
+                 <img id="croix3" src="images/croix.png">
+                
+            </div>
+       
+            
         </div>
+		
+		<script type="text/javascript" src="js.js"></script>
     </body>
 </html>
